@@ -2,13 +2,13 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>PetShop</title>
+    <title>Pet Mania</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>PetShop Feliz</h1>
+        <h1>Pet Mania</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Início</a></li>

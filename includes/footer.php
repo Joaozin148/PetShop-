@@ -1,6 +1,6 @@
 </main>
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> PetShop Feliz. Todos os direitos reservados.</p>
+        <p>&copy; <?php echo date("Y"); ?> Pet Mania. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
