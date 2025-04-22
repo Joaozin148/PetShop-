@@ -28,6 +28,9 @@
             <label for="data_nascimento">Data de nascimento do pet:</label>
             <input type="text" name="data_nascimento" id="data_nascimento" placeholder="dd/mm/aaaa" required>
 
+            <label for="observacao">Alguma observação sobre o pet:</label><br>
+            <textarea id="observacao" name="observacao" rows="4" cols="50" placeholder="Digite aqui quaisquer detalhes ou necessidades especiais do pet..."></textarea><br><br>
+
             <input type="submit" value="Cadastrar">
         </form>
 
@@ -39,6 +42,7 @@
         $servicos = $_POST['servicos'] ?? [];
         $telefone = preg_replace('/\D/', '', $_POST['telefone']);
         $data = preg_replace('/\D/', '', $_POST['data_nascimento']);
+        $observacao = htmlspecialchars($_POST['observacao'] ?? 'Nenhuma observação fornecida');
 
          if (strlen($telefone) === 11) {
             $telefone_formatado = '(' . substr($telefone, 0, 2) . ') ' . substr($telefone, 2, 5) . '-' . substr($telefone, 7);
@@ -46,12 +50,12 @@
             $telefone_formatado = 'Telefone inválido';
         }
 
-        
         if (strlen($data) === 8) {
             $data_formatada = substr($data, 0, 2) . '/' . substr($data, 2, 2) . '/' . substr($data, 4);
         } else {
             $data_formatada = 'Data inválida';
         }
+        
         echo "<div class='conteudo'><h3>Dados Recebidos:</h3>";
         echo "Nome do Pet: $nome<br>";
         echo "Tipo: $tipo<br>";
@@ -62,7 +66,9 @@
         foreach ($servicos as $servico) {
             echo "<li>" . htmlspecialchars($servico) . "</li>";
         }
-        echo "</ul></div>";
+        echo "</ul>";
+        echo "Observação sobre o Pet: $observacao<br>";
+        echo "</div>";
     }
 ?>
-
+</main>
