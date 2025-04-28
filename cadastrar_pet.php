@@ -23,7 +23,7 @@
             </select>
 
             <label for="telefone">Telefone do dono:</label>
-            <input type="text" name="telefone" id="telefone" placeholder="(99) 99999-9999" required>
+            <input type="number" name="telefone" id="telefone" placeholder="(99) 99999-9999" required>
 
             <label for="data_nascimento">Data de nascimento do pet:</label>
             <input type="text" name="data_nascimento" id="data_nascimento" placeholder="dd/mm/aaaa" required>
